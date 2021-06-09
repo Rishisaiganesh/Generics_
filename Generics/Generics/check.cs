@@ -4,32 +4,41 @@ using System.Text;
 
 namespace Generics
 {
-    class check
+    public class check
     {
-        public static void print(int[] inputArray)
+        public static int MaximumNumber(int firstnumber, int secondnumber, int thirdnumber)
         {
-            foreach(int Check in inputArray)
+            if (firstnumber.CompareTo(secondnumber) > 0 && firstnumber.CompareTo(thirdnumber) > 0)
             {
-                Console.WriteLine(Check);
-
+                return firstnumber;
             }
+            if (secondnumber.CompareTo(firstnumber) > 0 && secondnumber.CompareTo(thirdnumber) > 0)
+            {
+                return secondnumber;
+            }
+            if (thirdnumber.CompareTo(firstnumber) > 0 && thirdnumber.CompareTo(secondnumber) > 0)
+            {
+                return thirdnumber;
+            }
+            throw new Exception();
 
         }
-        public static void print(double[] inputArray)
-        {
-            foreach(double Check in inputArray)
-            {
-                Console.WriteLine(Check);
 
-            }
-        }
-        public static void print(char[] inputArray)
+        public static double DoubleMaximumNumber(double firstnumber, double secondnumber, double thirdnumber)
         {
-            foreach(char Check in inputArray)
+            if (firstnumber.CompareTo(secondnumber) > 0 && firstnumber.CompareTo(thirdnumber) > 0)
             {
-                Console.WriteLine(Check);
-
+                return firstnumber;
             }
+            if (secondnumber.CompareTo(firstnumber) > 0 && secondnumber.CompareTo(thirdnumber) > 0)
+            {
+                return secondnumber;
+            }
+            if (thirdnumber.CompareTo(firstnumber) > 0 && thirdnumber.CompareTo(secondnumber) > 0)
+            {
+                return thirdnumber;
+            }
+            throw new Exception();
         }
     }
 }
